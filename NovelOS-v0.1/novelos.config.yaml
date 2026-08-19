@@ -1,0 +1,36 @@
+version: "0.1.0"
+project_name: "NovelOS"
+default_mode: "DISCUSSION"
+
+principles:
+  constitution: "core/constitution.md"
+  router: "core/router.md"
+  memory_policy: "core/memory-policy.md"
+
+agents:
+  story_partner: "agents/story-partner.md"
+  director: "agents/director.md"
+  planner: "agents/planner.md"
+  writer: "agents/writer.md"
+  humanizer: "agents/humanizer.md"
+  editor: "agents/editor.md"
+  continuity: "agents/continuity.md"
+  memory_keeper: "agents/memory-keeper.md"
+
+memory:
+  types:
+    - FACT
+    - SUMMARY
+    - KEY_PASSAGE
+    - CREATIVE_HISTORY
+  canon_requires_confirmation: true
+  silent_overwrite: false
+
+production:
+  automatic_full_pipeline: false
+  targeted_revision: true
+  discussion_blocks_writer: true
+
+ruflo:
+  integration_status: "adapter-pending"
+  strategy: "keep NovelOS domain logic independent from Ruflo internal paths"

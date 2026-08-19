@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NovelOS Discussion Session",
+  "type": "object",
+  "required": ["id", "mode", "notes"],
+  "properties": {
+    "id": {"type": "string"},
+    "mode": {"const": "DISCUSSION"},
+    "notes": {"type": "array", "items": {"type": "string"}},
+    "live_questions": {"type": "array", "items": {"type": "string"}},
+    "promising_ideas": {"type": "array", "items": {"type": "string"}},
+    "parked_ideas": {"type": "array", "items": {"type": "string"}},
+    "canon_changes": {"type": "array", "maxItems": 0}
+  }
+}

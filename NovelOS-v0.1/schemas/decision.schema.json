@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NovelOS Creative Decision",
+  "type": "object",
+  "required": ["id", "decision", "status"],
+  "properties": {
+    "id": {"type": "string"},
+    "decision": {"type": "string"},
+    "status": {"enum": ["PROPOSED", "CONFIRMED", "REVERSED"]},
+    "alternatives_considered": {"type": "array", "items": {"type": "string"}},
+    "work_reason": {"type": "string"},
+    "source_session": {"type": "string"}
+  }
+}

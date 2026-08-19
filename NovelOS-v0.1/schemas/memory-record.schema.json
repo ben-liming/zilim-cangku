@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NovelOS Memory Record",
+  "type": "object",
+  "required": ["id", "type", "status", "content"],
+  "properties": {
+    "id": {"type": "string"},
+    "type": {"enum": ["FACT", "SUMMARY", "KEY_PASSAGE", "CREATIVE_HISTORY"]},
+    "status": {"enum": ["UNCONFIRMED", "CANON", "DISPUTED", "RETIRED"]},
+    "content": {"type": "string"},
+    "source": {"type": "string"},
+    "related": {"type": "array", "items": {"type": "string"}},
+    "reason": {"type": "string"},
+    "created_at": {"type": "string"}
+  },
+  "additionalProperties": true
+}
